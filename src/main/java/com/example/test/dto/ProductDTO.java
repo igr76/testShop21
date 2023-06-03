@@ -5,7 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 /**
- * Сущность объявления
+ * ProductDTO for the {@link com.example.test.entity.Product} entity
  */
 @Getter
 @Setter
@@ -13,7 +13,6 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProductDTO {
-
         /** Категория товара
          * @param category  */
         Category category;
