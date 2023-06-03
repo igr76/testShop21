@@ -1,24 +1,27 @@
 package com.example.test.entity;
 
 import com.example.test.dto.Category;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 
 import javax.persistence.*;
 
 /**
- * Сущность объявления
+ * Сущность товаров
  */
 @Getter
 @Setter
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "Products")
 @Entity
 public class Product {
-    /** Id Объявления
+    /** Id товара
      * @param id  */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     Integer id;
     /** Категория товара
      * @param category  */
@@ -37,6 +40,8 @@ int price;
 int quantity;
     /** Свойства товара
      * @param properties  */
-@OneToOne
-ProductProperties properties;
+    @OneToOne
+    ProductProperties properties;
+
+
 }

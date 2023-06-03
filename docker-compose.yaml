@@ -1,0 +1,13 @@
+version: '2.3'
+
+services:
+  app:
+    build: .
+    container_name: testShop21
+
+
+    ports:
+      - "8081:8081"
+
+
+
